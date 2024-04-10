@@ -16,8 +16,6 @@
 
 ## Rules and Examples
 
-- If the rover reaches the end of the planet, it wraps around the coordinate axis. There are no negative coordinates.
-
 - Examples for a rover initialized at coordinates 0,0 and oriented towards the north:
 
   - 'L' => '0:0:W'
