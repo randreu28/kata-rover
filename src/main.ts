@@ -51,14 +51,17 @@ function rotate(direction: Direction, command: "L" | "R") {
  * @returns The new cardinal position
  */
 function move(position: Position, direction: Direction) {
+  const maxX = 9;
+  const maxY = 9;
+
   switch (direction) {
     case "N":
-      return { ...position, y: position.y + 1 };
+      return { ...position, y: position.y >= maxY ? 0 : position.y + 1 };
     case "S":
-      return { ...position, y: position.y - 1 };
+      return { ...position, y: position.y <= 0 ? maxY : position.y - 1 };
     case "E":
-      return { ...position, x: position.x + 1 };
+      return { ...position, x: position.x >= maxX ? 0 : position.x + 1 };
     case "W":
-      return { ...position, x: position.x - 1 };
+      return { ...position, x: position.x <= 0 ? maxX : position.x - 1 };
   }
 }

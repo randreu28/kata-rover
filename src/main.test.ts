@@ -9,14 +9,14 @@ test("Low complexity tests", () => {
 
 test("Middle complexity tests", () => {
   expect(main("RFF")).toBe("2:0:E");
-  expect(main("LFF")).toBe("-2:0:W");
-  expect(main("LLFF")).toBe("0:-2:S");
+  expect(main("LFF")).toBe("8:0:W");
+  expect(main("LLFF")).toBe("0:8:S");
   expect(main("FRFFR")).toBe("2:1:S");
 });
 
 test("High complexity tests", () => {
-  expect(main("LFFRFF")).toBe("-2:2:N");
-  expect(main("LLFFFRF")).toBe("-1:-3:W");
+  expect(main("LFFRFF")).toBe("8:2:N");
+  expect(main("LLFFFRF")).toBe("9:7:W");
   expect(main("FRFFRLRF")).toBe("2:0:S");
   expect(main("FFFFLRLLFFFFRR")).toBe("0:0:N");
 });
