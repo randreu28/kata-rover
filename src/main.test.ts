@@ -15,5 +15,8 @@ test("Middle complexity tests", () => {
 });
 
 test("High complexity tests", () => {
-  //TODO
+  expect(main("LFFRFF")).toBe("-2:2:N");
+  expect(main("LLFFFRF")).toBe("-1:-3:W");
+  expect(main("FRFFRLRF")).toBe("2:0:S");
+  expect(main("FFFFLRLLFFFFRR")).toBe("0:0:N");
 });
